@@ -1,0 +1,7 @@
+将外置属性配置在application.yml文件中，在Bean中直接使用@Value注解
+该方式与application.properties唯一区别是支持中文
+SpringBoot将使用YamlPropertySourceLoader类加载读取YAML文件，默认支持UTF-8编码
+
+故若需要进行中文自定义属性配置请使用YAML文件
+
+但是@Value注解已经不推荐使用了，demo-configuration-03进行详细说明

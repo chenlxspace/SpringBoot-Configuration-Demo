@@ -1,0 +1,8 @@
+@ConfigurationProperties 可以使Bean读取application.yml中的属性并自动绑定
+可以指定属性前缀，且推荐通过属性前缀进行区分
+
+@EnableConfigurationProperties 可以是属性配置Bean注入到Spring IOC 容器中，被其他Bean依赖
+需要注解在Application类上，支持数组，多个属性配置Bean
+
+但是@ConfigurationProperties默认只能读取application属性文件中配置的属性，locations属性已经废弃，不推荐使用
+其他方式见demo-configuration-04

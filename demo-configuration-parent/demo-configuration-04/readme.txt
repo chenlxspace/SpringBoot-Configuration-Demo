@@ -1,0 +1,15 @@
+@ConfigurationProperties 可以使Bean读取application.yml中的属性并自动绑定
+可以指定属性前缀，且推荐通过属性前缀进行区分
+
+@EnableConfigurationProperties 可以是属性配置Bean注入到Spring IOC 容器中，被其他Bean依赖
+需要注解在Application类上，支持数组，多个属性配置Bean
+
+当自定义属性存在于独立属性文件中，可通过@PropertySource和@Configuration组合使用，达到
+@ConfigurationProperties location的效果
+
+@PropertySource指定自定义属性文件名称即可
+
+需要注意的是此时为防止中文乱码需要对@PropertySource指定编码格式
+
+那么@PropertySource是否支持读取yml格式的文件呢？毕竟之前发现yml文件编码格式是UTF-8
+详情见demo-configuration-05
